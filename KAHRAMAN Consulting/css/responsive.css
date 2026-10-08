@@ -1,0 +1,429 @@
+```css
+/* =========================================================
+   KAHRAMAN CONSULTING
+   Responsive stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETTES
+   Jusqu'à 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    /* ---------- NAVIGATION ---------- */
+
+    .navbar {
+        height: 80px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links > a {
+        font-size: 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero h1 {
+        max-width: 750px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        min-height: 350px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .process-item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   TABLETTES / PETITS ÉCRANS
+   Jusqu'à 850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    .section {
+        padding: 90px 0;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .nav-links {
+        position: fixed;
+
+        top: 80px;
+        right: -100%;
+
+        width: 100%;
+        height: calc(100vh - 80px);
+
+        padding: 50px 8%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 28px;
+
+        background: rgba(8, 8, 8, 0.98);
+
+        transition: right 0.4s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links > a {
+        font-size: 18px;
+    }
+
+    .nav-cta {
+        margin-top: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 100svh;
+
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .hero h1 {
+        max-width: 650px;
+
+        font-size: clamp(48px, 9vw, 72px);
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        max-width: 550px;
+
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .section-label {
+        margin-bottom: 0;
+    }
+
+
+    /* ---------- SECTION HEADINGS ---------- */
+
+    .section-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        margin-bottom: 50px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* =========================================================
+   SMARTPHONES
+   Jusqu'à 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    .container {
+        width: 88%;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    h2 {
+        font-size: 42px;
+        letter-spacing: -1.8px;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .navbar {
+        width: 88%;
+        height: 75px;
+    }
+
+    .nav-links {
+        top: 75px;
+        height: calc(100vh - 75px);
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 100svh;
+
+        background-position: 63% center;
+    }
+
+    .hero-content {
+        width: 88%;
+        margin-top: 70px;
+    }
+
+    .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 13vw, 64px);
+
+        letter-spacing: -2.5px;
+        line-height: 1;
+    }
+
+    .hero-description {
+        margin-top: 25px;
+
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+
+        margin-top: 30px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .intro-content h2 {
+        margin-bottom: 25px;
+    }
+
+    .intro-content > p:not(.subtitle) {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 330px;
+        padding: 35px 25px;
+    }
+
+    .service-card h3 {
+        font-size: 21px;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 50px;
+    }
+
+    .process-item {
+        min-height: auto;
+
+        padding: 35px 0;
+
+        border-right: none !important;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .process-item:last-child {
+        border-bottom: none;
+    }
+
+    .process-item h3 {
+        margin-top: 30px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta {
+        padding: 90px 0;
+    }
+
+    .cta h2 {
+        font-size: 42px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+
+        padding-bottom: 45px;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-bottom > div {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* =========================================================
+   TRÈS PETITS SMARTPHONES
+   Jusqu'à 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo span {
+        font-size: 15px;
+    }
+
+    .logo small {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    h2,
+    .cta h2 {
+        font-size: 36px;
+    }
+
+    .service-card {
+        min-height: 320px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   Réduction des animations si demandée par le système
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+```
